@@ -8,6 +8,7 @@ let PowerMock = artifacts.require('./mocks/PowerMock.sol');
 let formula;
 
 contract('PowerMock', () => {
+  // return
   before(async () => {
     formula = await PowerMock.new();
   });

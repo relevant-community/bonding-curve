@@ -10,7 +10,7 @@ contract('BondingCurve', accounts => {
   const startPoolBalance = 10 ** 14; // one coin costs .0001 ether;
   const reserveRatio = Math.round(1 / 3 * 1000000) / 1000000;
   const solRatio = Math.floor(reserveRatio * 1000000);
-  let gasPrice = 19 * (10 ** 9);
+  let gasPrice = 1 * 1e18;
 
   before(async () => {
     instance = await BondingCurveMock.new(startSupply, startPoolBalance, solRatio, gasPrice);
