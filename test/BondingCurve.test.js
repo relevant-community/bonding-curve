@@ -158,6 +158,21 @@ contract('BondingCurve', accounts => {
    * TODO selling ALL tokens sets the totalSupply to 0 and kills the contract
    * this is because bancor formulas cannot handle totalSupply or poolBalance = 0 or even close to 0
    */
+  it('should buy tokens after totalSupply & poolBlance is 0', async () => {
+    let amount = 5 * (10 ** decimals);
+
+    const startBalance = await instance.balanceOf.call(accounts[0]);
+
+    let p = await getRequestParams(amount);
+    console.log('current supply ', p.totalSupply);
+
+    let buyTokens = await instance.buy({ from: accounts[0], value: Math.floor(p.price) });
+    console.log('buy gas', buyTokens.receipt.gasUsed);
+
+    const endBalance = await instance.balanceOf.call(accounts[0]);
+    let amountBought = endBalance.sub(startBalance);
+    assert.isAtMost(Math.abs(amountBought.sub(amount)), 1e4, 'should be able to buy tokens');
+  });
 
   it('should not be able to set gas price of 0', async function () {
     await assertRevert(instance.setGasPrice.call(0));
