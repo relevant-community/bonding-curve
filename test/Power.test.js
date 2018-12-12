@@ -3,12 +3,11 @@
 
 let constants = require('./helpers/PowerFormulaConstants');
 
-let PowerMock = artifacts.require('./mocks/PowerMock.sol');
+let PowerMock = artifacts.require('PowerMock.sol');
 
 let formula;
 
 contract('PowerMock', () => {
-  return
   before(async () => {
     formula = await PowerMock.new();
   });

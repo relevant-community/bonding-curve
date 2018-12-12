@@ -1,7 +1,7 @@
 import assertRevert from './helpers/assertRevert';
 import expectThrow from './helpers/expectThrow';
 
-const BondingCurveMock = artifacts.require('../contracts/mocks/BondingCurveMock.sol');
+const BondingCurveMock = artifacts.require('BondingCurveMock.sol');
 
 contract('BondingCurve', accounts => {
   let instance;

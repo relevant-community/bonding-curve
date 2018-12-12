@@ -2,11 +2,13 @@ pragma solidity ^0.4.18;
 
 import "../BondingCurve.sol";
 
-contract BondingCurveMock is BondingCurve{
+
+contract BondingCurveMock is BondingCurve {
   function BondingCurveMock(
     uint256 _totalSupply,
     uint32 _reserveRatio,
-    uint256 _gasPrice) public payable {
+    uint256 _gasPrice) public payable
+  {
 
     reserveRatio = _reserveRatio;
     totalSupply_ = _totalSupply;

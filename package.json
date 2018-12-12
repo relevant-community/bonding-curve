@@ -12,10 +12,10 @@
     "lint:sol:fix": "solium -d . --fix"
   },
   "dependencies": {
-    "npm-watch": "^0.3.0",
+    "npm-watch": "^0.5.0",
     "solium": "^1.1.5",
-    "truffle-hdwallet-provider": "0.0.3",
-    "zeppelin-solidity": "1.6.0"
+    "truffle-hdwallet-provider": "0.0.6",
+    "zeppelin-solidity": "1.12.0"
   },
   "watch": {
     "test": {
@@ -28,7 +28,6 @@
     }
   },
   "devDependencies": {
-    "dotenv": "^4.0.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-2": "^6.18.0",
@@ -36,10 +35,11 @@
     "babel-register": "^6.23.0",
     "chai": "^4.0.2",
     "chai-as-promised": "^7.0.0",
-    "chai-bignumber": "^2.0.0",
-    "eslint": "^4.17.0",
-    "eslint-config-airbnb-base": "^12.1.0",
+    "chai-bignumber": "^3.0.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "solidity-coverage": "^0.4.11"
+    "solidity-coverage": "^0.5.11"
   }
 }
